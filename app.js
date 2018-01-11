@@ -23,6 +23,7 @@ var cells = require('./routes/cells');
 var authMiddleware = require('./routes/middlewares/authMiddleware');
 
 var app = express();
+app.use('/', express.static(__dirname + '/'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
